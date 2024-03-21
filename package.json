@@ -1,0 +1,22 @@
+{
+  "name": "sogalen",
+  "version": "1.0.0",
+  "description": "Sogalen is a Discord bot made with JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Sogalen"
+  },
+  "author": "AlexShadow",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
