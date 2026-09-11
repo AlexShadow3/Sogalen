@@ -1,0 +1,17 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull code, install deps and restart bot
+        run: |
+          cd /home/cosmoss/Documents/Sogalen
+          git pull origin main
+          npm install --omit=dev
+          pm2 restart discord-bot
