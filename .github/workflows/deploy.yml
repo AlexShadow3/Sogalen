@@ -12,6 +12,6 @@ jobs:
       - name: Pull code, install deps and restart bot
         run: |
           cd /home/cosmoss/Documents/Sogalen
-          git pull origin main
+          git pull origin master
           npm install --omit=dev
           pm2 restart discord-bot
