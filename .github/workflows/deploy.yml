@@ -14,4 +14,5 @@ jobs:
           cd /home/cosmoss/Documents/Sogalen
           git pull origin master
           npm install --omit=dev
-          pm2 restart discord-bot
+          node deploy-commands.js
+          pm2 restart sogalen
