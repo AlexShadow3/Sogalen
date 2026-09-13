@@ -15,5 +15,13 @@ jobs:
           git pull origin master
           npm install --omit=dev
           node deploy-commands.js
-          pm2 startOrReload main.js --name "sogalen"
+
+          if pm2 describe sogalen > /dev/null 2>&1; then
+            echo "Redémarrage du bot..."
+            pm2 restart sogalen
+          else
+            echo "Premier démarrage du bot..."
+            pm2 start main.js --name "sogalen"
+          fi
+
           pm2 save
